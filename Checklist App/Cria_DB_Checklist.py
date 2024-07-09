@@ -13,7 +13,7 @@ def create_db():
                     )''')
 
     # Tabela de tarefas
-    cursor.execute('''CREATE TABLE IF NOT EXISTS tasks (
+    cursor.execute('''CREATE OR ALTER TABLE IF NOT EXISTS tasks (
                         id INTEGER PRIMARY KEY,
                         user_id INTEGER,
                         task TEXT NOT NULL,
